@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,51 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
-    <h1>test</h1>
-    <button class="btn btn-primary">test</button>
+
+<body onload="init()">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">QuizApp</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card quiz-card">
+            <img src="./img/quiz.jpg" class="card-img-top" alt="Quiz">
+            <div class="card-body">
+                <h5 id="questionText" class="card-title"></h5>
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+                    <div id="answer1" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
+                    <div id="answer2" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
+                    <div id="answer3" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
+                    <div id="answer4" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="question-footer">
+                    <span><b>1</b> von <b id="questionsSum"></b> Fragen</span>
+                    <button type="button" class="btn btn-secondary">Nächste Frage</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
